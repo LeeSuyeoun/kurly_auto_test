@@ -2,13 +2,14 @@ from login import login
 from slack_notifi import send_to_slack
 from selenium import webdriver
 from TestCase1 import tc1
+from TestCase2 import tc2
 
 import time
 import traceback
 
 
 if __name__ == "__main__":
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = "https://hooks.slack.com/services/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"
     success_id = "ssss8784"
     password = "testtest00"
 
@@ -26,6 +27,9 @@ if __name__ == "__main__":
             # TC1 실행
             tc1_result = tc1(driver)
             combined_result += tc1_result + "\n\n"
+            # TC2 실행
+            tc2_result = tc2(driver)
+            combined_result += tc2_result + "\n\n"
 
     except Exception as e:
         # 예외 발생 시 오류 메시지를 추가
