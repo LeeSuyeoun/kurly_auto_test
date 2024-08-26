@@ -19,10 +19,10 @@ def login(driver, id, password):
         )
 
         if username.text == "이수연 님":
-            result = "로그인 성공 :" + username.text + "과 일치합니다"
+            result = "로그인 성공 " + username.text + "과 일치합니다"
             return True, result
         else:
-            result = "로그인 실패 :" + username.text + "과 일치 하지 않습니다"
+            result = "로그인 실패 " + username.text + "과 일치 하지 않습니다"
             return False, result
 
     except Exception as e:
